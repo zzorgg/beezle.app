@@ -1,7 +1,7 @@
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="text-base-content border-t border-base-300/40 bg-base-100/40 backdrop-blur-xl supports-[backdrop-filter]:bg-base-100/40">
+    <footer className="text-base-content border-t-2">
       <div className="mx-auto w-full max-w-screen-xl px-4 py-8">
         <div className="flex flex-col items-center gap-4 text-center md:flex-row md:items-center md:justify-between md:text-left">
           <a

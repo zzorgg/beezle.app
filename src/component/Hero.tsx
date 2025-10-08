@@ -47,11 +47,8 @@ function Hero({
             <div>
               <h1 className="text-5xl font-bold">
                 An app to prove you're not{" "}
-                <span className="relative inline-block bg-[#42EF83] px-2 py-1 rounded rotate-2 line-through decoration-3 ">
-                  smart
-                  <span className="absolute -top-15 left-1 font-bold rotate-1 font-[cursive]">
-                    dumb
-                  </span>
+                <span className="relative inline-block bg-[#42EF83] px-2 py-1 rounded rotate-2">
+                  dumb
                 </span>
                 .
               </h1>

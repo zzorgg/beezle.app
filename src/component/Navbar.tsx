@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import ThemeToggle from "./ThemeToggle";
-
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -17,13 +15,13 @@ function Navbar() {
     <>
       <div
         className={
-          "navbar sticky top-0 z-50 min-h-[5rem] transition-none " +
+          "navbar sticky top-0 z-50 min-h-[5rem] transition-none" +
           (scrolled
             ? "bg-base-100/70 backdrop-blur-md shadow-sm"
             : "bg-base-100 shadow-none")
         }
       >
-        <div className="navbar-start">
+        <div className="navbar-start ">
           <div className="dropdown">
             <div
               tabIndex={0}
@@ -86,7 +84,6 @@ function Navbar() {
           </ul>
         </div>
         <div className="navbar-end gap-2 pr-4">
-          <ThemeToggle />
           <a
             href="https://github.com/your-repo-url"
             target="_blank"
