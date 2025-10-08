@@ -32,21 +32,6 @@ npm run build
 
 output will be in `dist/`.
 
-## Project structure
-
-Key paths to know:
-
-- `src/pages/Home.tsx` — homepage composition (Navbar, Hero, Technology, Team)
-- `src/pages/Steps.tsx` — Steps page for how to use the app (currently in development)
-- `src/pages/Footer.tsx` — site footer
-- `src/component/Navbar.tsx` — sticky navbar with blur-on-scroll, anchor links
-- `src/component/Hero.tsx` — hero with configurable background pattern
-- `src/component/Technology.tsx` — tech badges section
-- `src/component/Team.tsx` — team members section
-- `src/component/Powered.tsx` — "Powered by" strip
-- `src/index.css` — Tailwind + DaisyUI config and theme tokens
-- `public/` and `src/assets/` — images, logos, and media
-
 ## Customization
 
 ### Theme colors (DaisyUI + Tailwind)
@@ -65,11 +50,6 @@ Theme tokens live in `src/index.css` via DaisyUI plugins. Update primary/content
 }
 ```
 
-### Navbar
-
-- Update logo and brand text in `src/component/Navbar.tsx`.
-- Update menu links and anchor IDs to match your sections.
-
 ### Hero background patterns
 
 The hero supports two Tailwind-based patterns and an optional radial mask. Switch patterns by passing a prop to `Hero`:
@@ -82,8 +62,6 @@ The hero supports two Tailwind-based patterns and an optional radial mask. Switc
 // <Hero pattern="dots" />
 // <Hero pattern="grid" withMask={false} />
 ```
-
-Implementation: `src/component/Hero.tsx`. The patterned layer is an absolutely positioned overlay with `-z-10`, so it stays behind hero content only.
 
 ### Assets
 
