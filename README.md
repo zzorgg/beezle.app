@@ -6,6 +6,8 @@
 
 Landing site for the Beezle app, built with React, Typescript, Vite, Tailwind CSS, and DaisyUI.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
+
 </div>
 
 ## Quick start
@@ -101,7 +103,3 @@ This is a static Vite site. And it is deployed to hostinger.
 ## Contributing
 
 Issues and pull requests are welcome. Please run `npm run lint` and ensure the site builds before submitting changes.
-
-## License
-
-Copyright © 2025 Beezle. All rights reserved.
