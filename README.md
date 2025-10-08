@@ -2,7 +2,9 @@
 
 <img src="website.png" alt="website"/>
 
-# Beezle Website
+<div>
+<h1>beezle.app <span><img src="src/assets/logo/logo.png" alt="Beezle logo" width="24" height="24" /></span></h1>
+</div>
 
 Landing page for the Beezle app, built with React, Typescript, Vite, Tailwind CSS, and DaisyUI.
 
