@@ -19,10 +19,17 @@ function Footer() {
             </span>
           </a>
           <div className="text-sm opacity-80">
-            <p>© {year} zzorggg. All rights reserved.</p>
+            <p>© {year} zzorgg. All rights reserved.</p>
             <p>
-              zzorggg holds beezle.app. Currently built by Saif Ali Khan and
-              Mohammad Shoaib Khan.
+              zzorgg holds beezle.app. Currently built by{" "}
+              <span className="underline decoration-wavy decoration-primary">
+                Saif Ali Khan
+              </span>{" "}
+              and{" "}
+              <span className="underline decoration-wavy decoration-[#42EF83]">
+                Mohammad Shoaib Khan
+              </span>
+              .
             </p>
           </div>
         </div>

@@ -27,3 +27,12 @@ html::-webkit-scrollbar {
   font-weight: 400;
   font-style: normal;
 }
+
+/* Custom alert variant: dashed success border */
+.alert-dash {
+  border-width: 2px;
+  border-style: dashed;
+  border-radius: 0.75rem; /* match daisyUI rounded-box */
+  /* Use the success color from theme if available, else fall back to a green */
+  border-color: var(--color-success, #16a34a);
+}

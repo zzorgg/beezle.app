@@ -52,7 +52,6 @@ function Hero({
                 </span>
                 .
               </h1>
-
               <p className="py-6">
                 Finally, a way to truly show off your skills. Challenge your
                 opponents in math and CS, outsmart them with ease, and earn the
@@ -60,6 +59,9 @@ function Hero({
               </p>
               <button className="badge badge-outline badge-primary">
                 Coming soon
+              </button>{" "}
+              <button className="badge badge-outline badge-neutral">
+                The app is currently in development. Stay tuned!
               </button>
             </div>
           </div>
