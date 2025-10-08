@@ -4,41 +4,16 @@
 
 # Beezle Website
 
-Modern, responsive landing site for the Beezle app, built with React, Vite, Tailwind CSS v4, and DaisyUI.
+Landing site for the Beezle app, built with React, Typescript, Vite, Tailwind CSS, and DaisyUI.
 
 </div>
-
-## Overview
-
-This repository contains the Beezle marketing website. It features a sticky, blurred navbar, a patterned hero section, technology badges, a team section, and an optional steps page. The site is component-driven, type-safe, and optimized for fast local development and static deployment.
-
-## Features
-
-- React 19 + Vite 7 for fast dev server and optimized static builds
-- TypeScript with ESLint for type-safety and code quality
-- Tailwind CSS v4 with DaisyUI components and custom theme tokens
-- Sticky navbar with backdrop blur on scroll and anchor links
-- Configurable hero background patterns (grid/dots) with optional radial mask
-- Technology and team sections with easy-to-swap assets
-- React Router for simple page routing (/, /steps)
-- Smooth scrolling and hidden scrollbars for a clean look
-
-## Tech stack
-
-- React: ^19.1.1
-- Vite: ^7.1.7
-- TypeScript: ~5.9.3
-- Tailwind CSS: ^4.1.14
-- DaisyUI: ^5.1.28
-- React Router DOM: ^7.9.3
-- lucide-react icons: ^0.545.0
 
 ## Quick start
 
 Prerequisites:
 
-- Node.js 18+ (Node 20 LTS recommended)
-- npm 9+ (or your preferred package manager)
+- Node.js 18+ (Node 22 LTS recommended)
+- npm
 
 Install dependencies and start the dev server:
 
@@ -47,22 +22,21 @@ npm install
 npm run dev
 ```
 
-Build for production and preview locally:
+Build for production:
 
 ```bash
 npm run build
-npm run preview
 ```
 
-The static output will be in `dist/`.
+output will be in `dist/`.
 
 ## Project structure
 
 Key paths to know:
 
 - `src/pages/Home.tsx` — homepage composition (Navbar, Hero, Technology, Team)
-- `src/pages/Steps.tsx` — optional steps page
-- `src/pages/Footer.tsx` — site footer (used on home route)
+- `src/pages/Steps.tsx` — Steps page for how to use the app (currently in development)
+- `src/pages/Footer.tsx` — site footer
 - `src/component/Navbar.tsx` — sticky navbar with blur-on-scroll, anchor links
 - `src/component/Hero.tsx` — hero with configurable background pattern
 - `src/component/Technology.tsx` — tech badges section
@@ -118,19 +92,11 @@ Implementation: `src/component/Hero.tsx`. The patterned layer is an absolutely p
 
 - `npm run dev` — start Vite dev server
 - `npm run build` — type-check then build for production
-- `npm run preview` — preview the production build locally
 - `npm run lint` — run ESLint
 
 ## Deployment
 
-This is a static Vite site. After `npm run build`, deploy the `dist/` directory to any static host:
-
-- Vercel: import the repo, framework = Vite
-- Netlify: set build command `npm run build` and publish directory `dist`
-- GitHub Pages: push `dist` to a `gh-pages` branch, or use an action
-- Any static hosting/CDN that can serve files from `dist`
-
-If deploying to a subpath (e.g., `https://example.com/myapp/`), set `base` in `vite.config.ts` accordingly.
+This is a static Vite site. And it is deployed to hostinger.
 
 ## Contributing
 
