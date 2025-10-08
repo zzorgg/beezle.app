@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="src/assets/logo/logo.png" alt="Beezle logo" width="96" height="96" />
+<img src="website.png" alt="website"/>
 
 # Beezle Website
 
-Landing site for the Beezle app, built with React, Typescript, Vite, Tailwind CSS, and DaisyUI.
+Landing page for the Beezle app, built with React, Typescript, Vite, Tailwind CSS, and DaisyUI.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
