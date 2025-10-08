@@ -85,7 +85,7 @@ function Navbar() {
         </div>
         <div className="navbar-end gap-2 pr-4">
           <a
-            href="https://github.com/your-repo-url"
+            href="https://github.com/zzorgg/beezle.app"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-neutral flex items-center gap-2"

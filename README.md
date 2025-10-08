@@ -1,85 +1,102 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="src/assets/logo/logo.png" alt="Beezle logo" width="96" height="96" />
 
-Currently, two official plugins are available:
+# Beezle Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Modern, responsive landing site for the Beezle app, built with React, Vite, Tailwind CSS v4, and DaisyUI.
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Overview
 
-## Expanding the ESLint configuration
+This repository contains the Beezle marketing website. It features a sticky, blurred navbar, a patterned hero section, technology badges, a team section, and an optional steps page. The site is component-driven, type-safe, and optimized for fast local development and static deployment.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Features
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+- React 19 + Vite 7 for fast dev server and optimized static builds
+- TypeScript with ESLint for type-safety and code quality
+- Tailwind CSS v4 with DaisyUI components and custom theme tokens
+- Sticky navbar with backdrop blur on scroll and anchor links
+- Configurable hero background patterns (grid/dots) with optional radial mask
+- Technology and team sections with easy-to-swap assets
+- React Router for simple page routing (/, /steps)
+- Smooth scrolling and hidden scrollbars for a clean look
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tech stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+- React: ^19.1.1
+- Vite: ^7.1.7
+- TypeScript: ~5.9.3
+- Tailwind CSS: ^4.1.14
+- DaisyUI: ^5.1.28
+- React Router DOM: ^7.9.3
+- lucide-react icons: ^0.545.0
+
+## Quick start
+
+Prerequisites:
+
+- Node.js 18+ (Node 20 LTS recommended)
+- npm 9+ (or your preferred package manager)
+
+Install dependencies and start the dev server:
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Build for production and preview locally:
 
-```js
-// eslint.config.js
-import reactX from "eslint-plugin-react-x";
-import reactDom from "eslint-plugin-react-dom";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+npm run build
+npm run preview
 ```
 
-## Hero background patterns
+The static output will be in `dist/`.
 
-The hero section on the home page has a decorative background limited to that section only. It supports two Tailwind CSS-based patterns using arbitrary values:
+## Project structure
 
-- Grid: linear gradients with `bg-[size:20px_20px]`
-- Dots: radial gradient with `bg-[size:10px_10px]`
+Key paths to know:
 
-Switch patterns by passing a prop to `Hero`:
+- `src/pages/Home.tsx` — homepage composition (Navbar, Hero, Technology, Team)
+- `src/pages/Steps.tsx` — optional steps page
+- `src/pages/Footer.tsx` — site footer (used on home route)
+- `src/component/Navbar.tsx` — sticky navbar with blur-on-scroll, anchor links
+- `src/component/Hero.tsx` — hero with configurable background pattern
+- `src/component/Technology.tsx` — tech badges section
+- `src/component/Team.tsx` — team members section
+- `src/component/Powered.tsx` — "Powered by" strip
+- `src/index.css` — Tailwind + DaisyUI config and theme tokens
+- `public/` and `src/assets/` — images, logos, and media
+
+## Customization
+
+### Theme colors (DaisyUI + Tailwind)
+
+Theme tokens live in `src/index.css` via DaisyUI plugins. Update primary/content colors to match your brand:
+
+```css
+@plugin "daisyui" {
+  themes: light;
+}
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #155dfc;
+  --color-base-content: #0b0e13;
+}
+```
+
+### Navbar
+
+- Update logo and brand text in `src/component/Navbar.tsx`.
+- Update menu links and anchor IDs to match your sections.
+
+### Hero background patterns
+
+The hero supports two Tailwind-based patterns and an optional radial mask. Switch patterns by passing a prop to `Hero`:
 
 ```tsx
 // src/pages/Home.tsx
@@ -90,4 +107,35 @@ Switch patterns by passing a prop to `Hero`:
 // <Hero pattern="grid" withMask={false} />
 ```
 
-Implementation lives in `src/component/Hero.tsx`. The parent container is `relative` and the patterned layer is an `absolute` overlay with `-z-10`, so it stays behind the hero content only.
+Implementation: `src/component/Hero.tsx`. The patterned layer is an absolutely positioned overlay with `-z-10`, so it stays behind hero content only.
+
+### Assets
+
+- Replace images in `src/assets/logo`, `src/assets/techstack`, etc., as needed.
+- Update `public/` for any static files you want served at the root.
+
+## Scripts
+
+- `npm run dev` — start Vite dev server
+- `npm run build` — type-check then build for production
+- `npm run preview` — preview the production build locally
+- `npm run lint` — run ESLint
+
+## Deployment
+
+This is a static Vite site. After `npm run build`, deploy the `dist/` directory to any static host:
+
+- Vercel: import the repo, framework = Vite
+- Netlify: set build command `npm run build` and publish directory `dist`
+- GitHub Pages: push `dist` to a `gh-pages` branch, or use an action
+- Any static hosting/CDN that can serve files from `dist`
+
+If deploying to a subpath (e.g., `https://example.com/myapp/`), set `base` in `vite.config.ts` accordingly.
+
+## Contributing
+
+Issues and pull requests are welcome. Please run `npm run lint` and ensure the site builds before submitting changes.
+
+## License
+
+Copyright © 2025 Beezle. All rights reserved.
