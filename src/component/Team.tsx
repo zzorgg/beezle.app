@@ -1,5 +1,7 @@
 import { useMemo } from "react";
 import Badge from "./Badge";
+import fei8ht from "../assets/team/f-ei8ht.png";
+import towk from "../assets/team/towk.jpeg";
 
 type Side = "start" | "end";
 
@@ -24,16 +26,16 @@ function Team() {
         time: "12:45",
         text: "Why The Knight?",
         footer: "sent at 12:45",
-        avatar: "/src/assets/team/f-ei8ht.png",
+        avatar: fei8ht,
       },
       {
         id: 2,
         side: "end",
-        name: "twok",
+        name: "towk",
         time: "12:46",
         text: "Why Psyduck?",
         footer: "sent at 12:46",
-        avatar: "/src/assets/team/twok.jpeg",
+        avatar: towk,
         bubbleClass: "chat-bubble-primary",
       },
       {
@@ -43,16 +45,16 @@ function Team() {
         time: "12:47",
         text: "Forget it. Why did you rename the release to “final-final-v3” again?",
         footer: "sent at 12:47",
-        avatar: "/src/assets/team/f-ei8ht.png",
+        avatar: fei8ht,
       },
       {
         id: 4,
         side: "end",
-        name: "twok",
+        name: "towk",
         time: "12:48",
         text: "Because 'final-final-v2' didn't feel emotionally complete.",
         footer: "sent at 12:48",
-        avatar: "/src/assets/team/twok.jpeg",
+        avatar: towk,
         bubbleClass: "chat-bubble-primary",
       },
       {
@@ -62,16 +64,16 @@ function Team() {
         time: "12:49",
         text: "The build failed again… but it works perfectly on my machine.",
         footer: "sent at 12:49",
-        avatar: "/src/assets/team/f-ei8ht.png",
+        avatar: fei8ht,
       },
       {
         id: 6,
         side: "end",
-        name: "twok",
+        name: "towk",
         time: "12:50",
         text: "Then ship your machine to production. Problem solved.",
         footer: "sent at 12:50",
-        avatar: "/src/assets/team/twok.jpeg",
+        avatar: towk,
         bubbleClass: "chat-bubble-primary",
       },
       {
@@ -81,7 +83,7 @@ function Team() {
         time: "12:51",
         text: "Done. Production's down, but at least my machine's doing great.",
         footer: "sent at 12:51",
-        avatar: "/src/assets/team/f-ei8ht.png",
+        avatar: fei8ht,
       },
     ],
     []

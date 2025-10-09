@@ -1,3 +1,5 @@
+import orgLogo from "../assets/logo/org.png";
+
 function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -10,7 +12,7 @@ function Footer() {
             aria-label="zzorggg home"
           >
             <img
-              src="/src/assets/logo/org.png"
+              src={orgLogo}
               alt="zzorgg logo"
               className="w-18 h-18 rounded-xl ring-1 ring-base-300/40"
             />

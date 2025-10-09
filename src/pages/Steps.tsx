@@ -1,3 +1,5 @@
+import maintanceImage from "../assets/logo/maintenance.png";
+
 function Steps() {
   return (
     <section
@@ -11,7 +13,7 @@ function Steps() {
               <div className="card-body items-center">
                 <div className="avatar placeholder mb-2">
                   <div className="bg-warning/20 text-warning-content w-16 rounded-full ring-1 ring-warning/30">
-                    <img src="/src/assets/logo/maintenance.png" alt="" />
+                    <img src={maintanceImage} alt="" />
                   </div>
                 </div>
                 <h1 className="card-title text-3xl">Page under construction</h1>

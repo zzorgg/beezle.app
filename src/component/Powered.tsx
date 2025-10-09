@@ -1,3 +1,9 @@
+import markRotating from "../assets/powered/mark-rotating.svg";
+import reactLogo from "../assets/powered/react.svg";
+import typescriptLogo from "../assets/powered/typescript.svg";
+import viteLogo from "../assets/powered/vite.svg";
+import tailwindcssLogo from "../assets/powered/tailwindcss.svg";
+
 function Powered() {
   return (
     <>
@@ -9,7 +15,7 @@ function Powered() {
           className="btn btn-lg btn-circle btn-default"
         >
           <img
-            src="/src/assets/powered/mark-rotating.svg"
+            src={markRotating}
             className="w-10 h-10 object-contain"
             alt="Open menu"
           />
@@ -18,28 +24,28 @@ function Powered() {
         {/* buttons that show up when FAB is open */}
         <button className="btn btn-lg btn-circle">
           <img
-            src="/src/assets/powered/react.svg"
+            src={reactLogo}
             className="w-7 h-7 object-contain"
             alt="Another Icon"
           />
         </button>
         <button className="btn btn-lg btn-circle">
           <img
-            src="/src/assets/powered/typescript.svg"
+            src={typescriptLogo}
             className="w-7 h-7 object-contain"
             alt="Another Icon"
           />
         </button>
         <button className="btn btn-lg btn-circle">
           <img
-            src="/src/assets/powered/vite.svg"
+            src={viteLogo}
             className="w-7 h-7 object-contain"
             alt="Another Icon"
           />
         </button>
         <button className="btn btn-lg btn-circle">
           <img
-            src="/src/assets/powered/tailwindcss.svg"
+            src={tailwindcssLogo}
             className="w-7 h-7 object-contain"
             alt="Another Icon"
           />

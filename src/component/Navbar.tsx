@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import logoImage from "../assets/logo/logo.png";
+import githubIcon from "../assets/brand/github-mark-white.svg";
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,29 +24,6 @@ function Navbar() {
         }
       >
         <div className="navbar-start ">
-          <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
-              aria-label="Open menu"
-              className="btn btn-ghost lg:hidden"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-          </div>
           <a
             className="flex items-center gap-2 text-xl p-0 ml-4"
             href="/"
@@ -52,7 +31,7 @@ function Navbar() {
             style={{ background: "none", boxShadow: "none" }}
           >
             <img
-              src="/src/assets/logo/logo.png"
+              src={logoImage}
               alt="Beezle Logo"
               className="w-12 h-12 rounded-4xl"
             />
@@ -90,11 +69,7 @@ function Navbar() {
             rel="noopener noreferrer"
             className="btn btn-neutral flex items-center gap-2"
           >
-            <img
-              src="/src/assets/brand/github-mark-white.svg"
-              alt="GitHub"
-              className="w-5 h-5"
-            />
+            <img src={githubIcon} alt="GitHub" className="w-5 h-5" />
             Star on GitHub
           </a>
         </div>
