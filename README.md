@@ -10,6 +10,12 @@ Landing page for the Beezle app, built with React, Typescript, Vite, Tailwind CS
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
+> ⚠️ **Warning:** This website is currently under active development. Commit messages, pushed changes, and features may be unstable.
+
+</div>
+
+---
+
 </div>
 
 ## Quick start
@@ -65,6 +71,8 @@ The hero supports two Tailwind-based patterns and an optional radial mask. Switc
 // <Hero pattern="grid" withMask={false} />
 ```
 
+credit => [Rifky Alfarez](https://dev.to/rifkyalfarez/how-to-create-grid-and-dots-background-using-tailwind-css-1jkb)
+
 ### Assets
 
 - Replace images in `src/assets/logo`, `src/assets/techstack`, etc., as needed.
@@ -78,8 +86,14 @@ The hero supports two Tailwind-based patterns and an optional radial mask. Switc
 
 ## Deployment
 
-This is a static Vite site. And it is deployed to hostinger.
+This is a static website. The domain name `beezle.app` is from **name.com** and the website is hosted on hostinger.
+
+For domain transfer you will need to add hosting provider's DNS Nameserver to the domain registrar.
 
 ## Contributing
 
 Issues and pull requests are welcome. Please run `npm run lint` and ensure the site builds before submitting changes.
+
+---
+
+> ⚠️ **Note:** We know how to make a website. We know how to use modern best practices, which includes using AVIF/WebP formats with fallbacks for images and `rel="noopener noreferrer`.
