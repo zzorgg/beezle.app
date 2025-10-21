@@ -6,7 +6,7 @@ import Steps from "./pages/Steps";
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <Powered />
       <Routes>
         {/* Home route with Footer */}
